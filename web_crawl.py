@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Professional Web Scraper Agent using BrightData SERP + Google Gemini LLM
 

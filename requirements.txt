@@ -1,0 +1,4 @@
+langchain-brightdata
+langchain-google-genai
+langgraph
+python-dotenv
