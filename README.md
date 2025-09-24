@@ -73,7 +73,7 @@ Healthcare in Dubai, UAE, has seen several recent developments:
 .
 ├── web_crawl.py        # Main script
 ├── requirements.txt    # Python dependencies
-├── .env                # API keys
+├── .env                # API keys not included
 └── README.md
 
 **Notes**
