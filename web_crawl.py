@@ -5,7 +5,6 @@ Features:
 - Uses ReAct agent to query SERP
 - Shows verbose ReAct steps (Thoughts → Actions → Observations → Final Answer)
 - Clean logging and structured output
-- No direct calls to BrightDataSERP (avoids deprecated search method)
 """
 
 import logging
@@ -30,6 +29,7 @@ BRIGHTDATA_ZONE = os.getenv("BRIGHT_DATA_ZONE")
 
 if not GOOGLE_API_KEY:
     logger.error("GOOGLE_API_KEY not found in environment variables.")
+    #print("Hi Hamudi")
     exit(1)
 
 if not BRIGHTDATA_ZONE:
@@ -66,7 +66,8 @@ agent = create_react_agent(
     tools=[serp_tool],
     prompt="""You are a web researcher agent with access to BrightData SERP. 
 Use the tool for the user's query, selecting appropriate country, language, 
-search engine, or vertical if not specified. Limit responses to 200 words."""
+search engine, or vertical if not specified.If you cannot find relevant information or the tool returns no results, respond with: "I don’t know.
+"""
 )
 
 logger.info("ReAct Web Scraper Agent created successfully.")
